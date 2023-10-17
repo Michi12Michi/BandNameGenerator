@@ -1,0 +1,13 @@
+<%- include("partials/header.ejs") %>
+
+<% if (locals.insertNoun && locals.insertAdj) {%>
+  <h1><%= insertNoun %> <%= insertAdj %></h1>
+<% } else {%>
+    <h1>Please submit to get a random name!</h1>
+<% } %>
+<form action="/submit" method="POST">
+  <button class="btn btn-secondary" type="submit">Generate name</button>
+</form>
+</main>
+</body>
+</html>
